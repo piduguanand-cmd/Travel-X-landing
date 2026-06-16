@@ -1,0 +1,264 @@
+html{
+    scroll-behavior:smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    background: #222;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo {
+    font-size: 28px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00bfff;
+}
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    background: url("../images/hero.png") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content{
+    background: rgba(0,0,0,0.5);
+    padding:30px;
+    border-radius:10px;
+    animation: fadeIn 2s ease;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 12px 25px;
+    border: none;
+    background: #00bfff;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background: #009acd;
+}
+
+/* Features */
+.features {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.features h2 {
+    margin-bottom: 40px;
+    font-size: 35px;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-card{
+    width: 300px;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+}
+
+.feature-card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 15px 30px rgba(0,191,255,0.4);
+}
+
+.feature-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.feature-card h3 {
+    margin: 15px 0;
+}
+
+/* About */
+.about{
+    background: rgba(255,255,255,0.05);
+    margin: 50px;
+    padding: 50px;
+    border-radius: 20px;
+}
+.about h2 {
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+
+/* Contact */
+.contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 30px;
+    font-size: 35px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact textarea {
+    height: 120px;
+}
+
+.contact button {
+    padding: 12px 25px;
+    background: #00bfff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background: #009acd;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .feature-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.hero-content{
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+.social-icons{
+    margin-bottom:15px;
+}
+
+.social-icons a{
+    text-decoration:none;
+    font-size:30px;
+    margin:0 10px;
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    transform:scale(1.3);
+}
+.feature-card{
+    transition: 0.4s ease;
+}
+
+.feature-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
